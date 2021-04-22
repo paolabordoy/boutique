@@ -44,7 +44,7 @@ public abstract class DbConnector {
 	public void setUpDB() {
 		this.url = "jdbc:postgresql://localhost:5432/Boutique"; //jdbc:postgresql://host:port/database
 		this.uname = "postgres";
-		this.password = "lunita01"; //"admin";
+		this.password = "1234"; //"admin";
 		
 		try {
 			Class.forName("org.postgresql.Driver");

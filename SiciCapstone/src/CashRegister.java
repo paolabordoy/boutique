@@ -197,5 +197,26 @@ public class CashRegister extends DbConnector {
 		Image i = myPicture.getScaledInstance(btnSearch.getWidth(), btnSearch.getHeight(), Image.SCALE_SMOOTH);
 		btnSearch.setIcon(new ImageIcon (i));
 		
+		JButton btnBack = new JButton("");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new HubWindow().getFrame().setVisible(true);
+				getFrame().dispose();
+				
+			}
+		});
+		btnBack.setBounds(487, 30, 85, 29);
+		frame.getContentPane().add(btnBack);
+
+		BufferedImage myPicture1 = null;
+		try {
+			myPicture1 = ImageIO.read(getClass().getResourceAsStream("/Images/backIcon.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Image i1 = myPicture1.getScaledInstance(btnBack.getWidth(), btnBack.getHeight(), Image.SCALE_SMOOTH);
+		btnBack.setIcon(new ImageIcon (i1));
+		
 	}
 }
